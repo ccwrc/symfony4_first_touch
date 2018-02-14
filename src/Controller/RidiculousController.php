@@ -9,16 +9,25 @@ namespace App\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class RidiculousController
+ * @package App\Controller
+ * @Route("/ridiculous")
+ */
 class RidiculousController {
+
+    // terminal: composer require annotations
 
     /**
      * @Route("/number")
      */
     public function number() {
-        $number = mt_rand(0, 100);
+        $number1 = mt_rand(10, 20);
+        $number2 = mt_rand(10, 20);
+        $result = $number1 <=> $number2;
 
         return new Response(
-                '<html><body>Lucky number: ' . $number . '</body></html>'
+                '<html><body>Result: ' . $result . '</body></html>'
         );
     }
 

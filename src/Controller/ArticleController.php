@@ -17,7 +17,16 @@ class ArticleController {
      * @Route("/")
      */
     public function homepage() {
+
         return new Response("first text art controller");
+    }
+
+    /**
+     * @Route("/show/{slug}")
+     */
+    public function show($slug) {
+
+        return new Response($slug . " show article test view");
     }
 
 }
