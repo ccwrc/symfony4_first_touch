@@ -16,7 +16,10 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class RidiculousController {
 
+    // Recipes: https://symfony.sh/
     // terminal: composer require annotations
+    // composer require sec-checker --dev
+    //
 
     /**
      * @Route("/number")

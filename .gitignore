@@ -11,3 +11,4 @@
 ###< symfony/web-server-bundle ###
 /nbproject/private/
 /nbproject/
+.idea/
