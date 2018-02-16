@@ -18,8 +18,8 @@ class RidiculousController {
 
     // Recipes: https://symfony.sh/
     // terminal: composer require annotations
-    // composer require sec-checker --dev
-    //
+    // composer require sec-checker --dev (it's run only in dev env)
+    // composer require twig
 
     /**
      * @Route("/number")
