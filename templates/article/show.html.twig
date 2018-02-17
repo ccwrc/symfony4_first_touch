@@ -1,0 +1,24 @@
+
+<h1>{{ title }}</h1>
+
+<div>
+    <p>
+        Okazuje się, że wersja 6 została utworzona już w 2009 roku (źródło), a prace nad nią rozpoczęto dużo wcześniej (2005). Niestety po pewnym czasie prace nad nową wersją ustały. Podstawowym problemem okazało się być przepisanie silnika z uwzględnieniem UNICODE. Niestety twórcy nie doszli do porozumienia i ostatecznie projekt ugrzązł w miejscu na parę dobrych lat. Gdy aktywność nad projektem została wznowiona, nazwa nowej wersji została poddana głosowaniu. Argumentów za było więcej niż przeciw. W rezultacie (58 głosów za, 24 przeciw) wygrała wersja oznakowana jako PHP 7.
+    </p>
+
+    <p>
+        edną z ważniejszych zmian jest ogromne przyspieszenie. Nowa wersja PHP jest ponad dwukrotnie szybsza od swojego poprzednika oraz zużywa znacząco mniej pamięci. Hostingowcy na pewno się ucieszą, bo ich maszyny udźwigną teraz znacznie większy ruch, bez żadnych dodatkowych kosztów.
+
+        Z racji, że wydajność to dość ciekawy temat, postanowiłem przeprowadzić kilka testów osobiście. Skompilowałem najnowszą dostępną wersją (7.0.0 ALPHA 1) i przeprowadziłem kilka eksperymentów. Dodatkowo, w testach uwzględniłem dedykowane rozwiązanie od Facebooka: HHVM – HipHop Virtual Machnie. Stanowi ona teraz główną i bezpośrednią konkurencję dla PHP 7.
+    </p>
+</div>
+
+<h2>Comments</h2>
+
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+        {% else %}
+        No comments.
+    {% endfor %}
+</ul>

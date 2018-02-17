@@ -1,9 +1,5 @@
 <?php
 
-/*
-  check <=>
- */
-
 namespace App\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -20,6 +16,8 @@ class RidiculousController {
     // terminal: composer require annotations
     // composer require sec-checker --dev (it's run only in dev env)
     // composer require twig
+
+    // class TestController extends AbstractController // give a shortcut method
 
     /**
      * @Route("/number")
