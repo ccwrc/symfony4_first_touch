@@ -19,6 +19,7 @@ class RidiculousController {
     // composer require profiler --dev (web debug toolbar)
     // composer require debug --dev (right display dump in twig, phpunit, monolog, etc.)
     // composer unpack debug (unpack debug-pack in composer.json)
+    // composer require asset
 
 
     // class TestController extends AbstractController // give a shortcut method
