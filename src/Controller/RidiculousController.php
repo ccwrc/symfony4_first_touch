@@ -17,7 +17,7 @@ class RidiculousController {
     // composer require sec-checker --dev (it's run only in dev env)
     // composer require twig
     // composer require profiler --dev (web debug toolbar)
-
+    // composer require debug --dev (right display dump in twig, phpunit, monolog, etc.)
 
     // class TestController extends AbstractController // give a shortcut method
 
