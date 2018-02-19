@@ -20,7 +20,8 @@ class RidiculousController {
     // composer require debug --dev (right display dump in twig, phpunit, monolog, etc.)
     // composer unpack debug (unpack debug-pack in composer.json)
     // composer require asset
-
+    // php bin/console cache:clear (after change config -> packages -> some.yaml reason:bug in early symf.4)
+    // php bin/console config:dump twig (display bundle configuration)
 
     // class TestController extends AbstractController // give a shortcut method
 

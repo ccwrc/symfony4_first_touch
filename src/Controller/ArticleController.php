@@ -50,6 +50,7 @@ EOF;
             $cache->save($item);
         }
         $articleContent = $item->get();
+        dump($markdown); die;
 
         //$articleContent = $markdown->transform($articleContent);
 
