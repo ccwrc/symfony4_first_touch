@@ -22,6 +22,9 @@ class RidiculousController {
     // composer require asset
     // php bin/console cache:clear (after change config -> packages -> some.yaml reason:bug in early symf.4)
     // php bin/console config:dump twig (display bundle configuration)
+    // full list services on container:
+    // php bin/console debug:container --show-private
+    // short: php bin/console debug:autowiring
 
     // class TestController extends AbstractController // give a shortcut method
 
