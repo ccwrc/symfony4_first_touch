@@ -26,6 +26,8 @@ class RidiculousController {
     // php bin/console debug:container --show-private
     // short: php bin/console debug:autowiring
 
+    // https://guides.wp-bullet.com/install-apcu-object-cache-for-php7-for-wordpress-ubuntu-16-04/
+
     // class TestController extends AbstractController // give a shortcut method
 
     /**

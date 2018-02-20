@@ -45,6 +45,7 @@ Sed ut **perspiciatis** unde omnis [iste](http://www.zakazanaplaneta.pl/) natus 
 EOF;
 
         dump($cache); die;
+        //phpinfo(); die;
         $item = $cache->getItem("markdown_".md5($articleContent));
         if(!$item->isHit()) {
             $item->set($markdown->transform($articleContent));
