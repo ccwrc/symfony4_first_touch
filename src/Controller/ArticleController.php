@@ -8,11 +8,10 @@
 
 namespace App\Controller;
 
-use Michelf\MarkdownInterface;
+use App\Service\MarkdownHelper;
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Cache\Adapter\AdapterInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -30,7 +29,7 @@ class ArticleController extends AbstractController {
     /**
      * @Route("/news/{slug}", name="article_show")
      */
-    public function show($slug, MarkdownInterface $markdown, AdapterInterface $cache) {
+    public function show($slug, MarkdownHelper $markdownHelper) {
 
         $comments = [
             "comment 1 ytytyyt uyuu yuyuy yuuy gh ghg ",
@@ -46,15 +45,8 @@ EOF;
 
         //dump($cache); die;
         //phpinfo(); die;
-        $item = $cache->getItem("markdown_".md5($articleContent));
-        if(!$item->isHit()) {
-            $item->set($markdown->transform($articleContent));
-            $cache->save($item);
-        }
-        $articleContent = $item->get();
+        $articleContent = $markdownHelper->parse($articleContent);
         //dump($markdown); die;
-
-        //$articleContent = $markdown->transform($articleContent);
 
         return $this->render("article/show.html.twig", [
             "title" => ucwords(str_replace("-", " ", $slug)),
