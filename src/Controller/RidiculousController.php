@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\SayHello;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -35,7 +36,8 @@ class RidiculousController {
     /**
      * @Route("/number")
      */
-    public function number() {
+    public function number()
+    {
         $number1 = mt_rand(10, 20);
         $number2 = mt_rand(10, 20);
         $result = $number1 <=> $number2;
@@ -45,6 +47,14 @@ class RidiculousController {
         );
     }
 
+    /**
+     * @Route("/sayHello/{name}")
+     */
+    public function sayHello($name, SayHello $sayHello)
+    {
 
+        return new Response($sayHello->SayHelloName($name));
+
+    }
 
 }
