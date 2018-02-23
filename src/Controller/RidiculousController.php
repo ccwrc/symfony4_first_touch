@@ -25,6 +25,8 @@ class RidiculousController {
     // php bin/console config:dump twig (display bundle configuration)
     // full list services on container:
     // php bin/console debug:container --show-private
+    // php bin/console debug:container --show-private searchWord (all with search)
+
     // short: php bin/console debug:autowiring
 
     // https://guides.wp-bullet.com/install-apcu-object-cache-for-php7-for-wordpress-ubuntu-16-04/
