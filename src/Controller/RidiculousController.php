@@ -32,7 +32,7 @@ class RidiculousController {
 
     // https://guides.wp-bullet.com/install-apcu-object-cache-for-php7-for-wordpress-ubuntu-16-04/
     // symfony error pages: https://symfony.com/doc/current/controller/error_pages.html
-    // new config file? clear the cache!
+    // new config file? clear the cache! (at symfony 4.04 and lower)
 
     // class TestController extends AbstractController // give a shortcut method
     // container hold all services and... config values (parameters)
