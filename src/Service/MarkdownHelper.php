@@ -44,6 +44,7 @@ class MarkdownHelper{
             $this->logger->info('bekon na sniadanie');
         }
 
+        dump($this->cache); die;
         $item = $this->cache->getItem("markdown_".md5($source));
         if(!$item->isHit()) {
             $item->set($this->markdown->transform($source));

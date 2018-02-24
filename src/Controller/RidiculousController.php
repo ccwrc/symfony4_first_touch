@@ -34,6 +34,7 @@ class RidiculousController {
     // new config file? clear the cache!
 
     // class TestController extends AbstractController // give a shortcut method
+    // container hold all services and... config values (parameters)
 
     /**
      * @Route("/number")
