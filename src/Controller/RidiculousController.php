@@ -36,6 +36,7 @@ class RidiculousController {
 
     // class TestController extends AbstractController // give a shortcut method
     // container hold all services and... config values (parameters)
+    // https://github.com/nexylan/slack-bundle
 
     /**
      * @Route("/number")
