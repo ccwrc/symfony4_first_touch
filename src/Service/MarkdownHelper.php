@@ -21,6 +21,7 @@ class MarkdownHelper{
      * @var LoggerInterface
      */
     private $logger;
+    private $isDebug;
 
     /**
      * auto-generate phpdoc in phpstorm -> alt+enter
@@ -29,10 +30,12 @@ class MarkdownHelper{
      * @param MarkdownInterface $markdown
      */
     public function __construct(AdapterInterface $cache, MarkdownInterface $markdown,
-                                LoggerInterface $markdownLogger) {
+                                LoggerInterface $markdownLogger, bool $isDebug) {
+        // bool $isDebug see -> config/services.yaml
         $this->cache = $cache;
         $this->markdown = $markdown;
         $this->logger = $markdownLogger;
+        $this->isDebug = $isDebug;
     }
 
     /**
@@ -44,7 +47,10 @@ class MarkdownHelper{
             $this->logger->info('bekon na sniadanie');
         }
 
-        dump($this->cache); die;
+        if($this->isDebug) {
+            return $this->markdown->transform($source);
+        }
+
         $item = $this->cache->getItem("markdown_".md5($source));
         if(!$item->isHit()) {
             $item->set($this->markdown->transform($source));

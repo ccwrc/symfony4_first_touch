@@ -18,6 +18,19 @@ use Symfony\Component\HttpFoundation\Response;
 class ArticleController extends AbstractController {
 
     /**
+     * @var bool
+     * currently used: just showing a controller with a constructor
+     * in symfony 4.1 AbstractController will have a $this->getParameter() shortcut method
+     */
+    private $isDebug;
+
+    // autowiring is really work in constructor functions
+    public function __construct(bool $isDebug) { // alt+enter -> init field
+
+        $this->isDebug = $isDebug;
+    }
+
+    /**
      * @Route("/", name="app_homepage")
      */
     public function homepage() {

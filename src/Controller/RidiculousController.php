@@ -26,6 +26,7 @@ class RidiculousController {
     // full list services on container:
     // php bin/console debug:container --show-private
     // php bin/console debug:container --show-private searchWord (all with search)
+    // php bin/console debug:container --parameters
 
     // short: php bin/console debug:autowiring
 
