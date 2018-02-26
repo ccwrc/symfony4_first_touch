@@ -38,6 +38,9 @@ class RidiculousController {
     // container hold all services and... config values (parameters)
     // https://github.com/nexylan/slack-bundle
 
+    // composer require maker --dev (make controller, entity and many more from console)
+
+
     /**
      * @Route("/number")
      */
