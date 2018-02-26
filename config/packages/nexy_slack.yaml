@@ -1,3 +1,10 @@
 nexy_slack:
     # The Slack API Incoming WebHooks URL.
     endpoint: '%env(SLACK_WEBHOOK_ENDPOINT)%'
+
+    # custom values:
+    # endpoint: '%env(string:SLACK_WEBHOOK_ENDPOINT)%'
+    # app.connection.port: '%env(int:DATABASE_PORT)%'
+    # string, bool, resolve, file, base64, constant, json, etc.
+    # chain availab. -> '%env(json:file:SECRETS_FILE)%'
+    # https://symfony.com/blog/new-in-symfony-3-4-advanced-environment-variables
